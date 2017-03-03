@@ -22,6 +22,7 @@ header {
 h2{
     color: white;
 }
+
 .introduction {
     margin-right: 10px;
 }
@@ -159,7 +160,7 @@ a{
 }
 
 /* internal list in main html */
-ul#horizontalList li  {
+ul#horizontalList li {
     display: inline;
 }
 
