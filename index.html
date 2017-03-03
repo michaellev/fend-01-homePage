@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Michael Lev 2017-02-21 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Lev - מיכאל לאב</title>
+    <!-- Good Practice: Place all External CSS Files Within the Head Tag -->
+    <link rel="stylesheet" href="css/general.css"/>
+</head>
+<body>
+    <header class="box" id="hdr">
+        <img src="allData/img/Michael-Lev-864.jpg" id="idMyPic" alt="Michael Lev">
+        <h1>Michael Lev - מיכאל לאב</h1>
+        <h2>Home Page - דף הבית</h2>
+    </header>
+
+    <div class="tabMain">
+        <a href="javascript:void(0)" class="tabButton" onclick="openTab(event, 'TabContactMe')">Contact me</a>
+        <a href="javascript:void(0)" class="tabButton" onclick="openTab(event, 'TabHobbies')">Hobbies</a>
+        <a href="javascript:void(0)" class="tabButton" onclick="openTab(event, 'TabGames')">Games</a>
+    </div>
+    <div id="TabContactMe" class="tabContent">
+        <a href="mailto:mlev.mail@gmail.com">email to: mlev.mail@gmail.com</a>
+    </div>
+    <div id="TabHobbies" class="tabContent">
+        <a href="html/articles.html">Jewish Thought - my articles מחשבת ישראל - מאמרים</a>
+        <a href="html/youtube.html">YouTybe - my channel הערוץ שלי ביוטיוב</a>
+    </div>
+    <div id="TabGames" class="tabContent">
+        <a href="html/game.html">Memory Monsters - Remember location of 2 identical monster cards</a>
+    </div>
+
+    <div class="dropdown">
+        <button onclick="dropBtnFunction()" class="dropbtn">Contact me</button>
+        <div id="contact-dropdown-content" class="dropdown-content">
+            <!--<a href="tel:0547718425">Phone to: 0547718425</a>-->
+            <a href="mailto:mlev.mail@gmail.com">email to: mlev.mail@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="introduction" dir = "rtl">
+        <h6>עודכן לאחרונה: 2/3/2017 שעה 17:06 (האתר נבנה בשבוע אחד, במסגרת תרגיל עצמי עבור קבלה לקורס FrontEnd)</h6>
+        <h3>קצת על עצמי:</h3>
+        <ul style="list-style-type:disc">
+            <li><span class="boldedUnderline">השכלה:</span> ישיבה תיכונית וישיבה גבוהה, ולאחר מכן - הנדסת חשמל, הטכניון (במסגרת העתודה האקדמית)</li>
+            <li>צבא: מהנדס אלקטרוניקה, חיל הים ענף גילוי, 6.5 שנים</li>
+            <li>הסבה עצמאית לתוכנה, ועבודה בשפות C,C++,C#,Java<br>במקומות:</li>
+                <ul id="horizontalList" style="list-style-type:circle">
+                    <li>האוניברסיטה העברית, מחלקת מדעי האטמוספירה ; </li>
+                    <li>אלת״א ; </li>
+                    <li>תדיראן תקשורת ו אי.סי.איי ; </li>
+                    <li>אנ.די.אס, ירושלים ; </li>
+                    <li>טקסט-אוואי, ירושלים ; </li>
+                    <li>אמדוקס, רעננה ; </li>
+                    <li>י.ב.מ. מחקר, חיפה ; </li>
+                    <li>איניואיטיב, רעננה ; </li>
+                </ul>
+            <hr>
+            <li><span class="boldedUnderline">תחביבים:</span></li>
+            <ul style="list-style-type:circle">
+                <li>תרבות - ספרות (ספרות לנוער, מדע בדיוני, אישיות, זוגיות, אימון וניהול עצמי, פילוסופיה ועוד), קולנוע, תיאטרון ומוסיקה</li>
+                <li>מחשבה יהודית</li>
+                <li>הוראה</li>
+                <li>פיתוח אפליקציות לאייפון, ממשק משתמש, Front End</li>
+            </ul>
+        </ul>
+    </div>
+    <!-- Good Practice: Place Javascript Files at the Bottom -->
+    <script src="js/general.js"></script>
+</body>
+</html>

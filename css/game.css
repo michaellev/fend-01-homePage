@@ -1,0 +1,64 @@
+/**
+ * Created by Michael Lev on 21/02/2017.
+ */
+.logo {
+    float:right;
+    width:  110px;
+    height: 130px;
+}
+
+.niceText {
+    color: lightgreen;
+    /*font-size: 200%;*/
+    font-style: italic;
+    margin: 1px 30px;
+    transform:scale(2,1);/*x,y*/
+    display:inline-block;
+}
+#idSpanPlayer, #idSpanPlayerPrev, #idSpanBestGameTime{
+    color: maroon;
+    font-style: italic;
+}
+#idBtnPlayAgain{
+    font-weight: bold;
+}
+#idBtnChangePlayer, #idElBestGameTime, #idBtnPlayAgain {
+    display: none;
+}
+/* display_html_page_after_loading_complete - css part ( #hideall {...} ) */
+#hideAll
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: white;
+    z-index: 99; /* Higher than anything else in the document */
+}
+/****************************/
+/****** Board of Cards ******/
+/****************************/
+
+.card {
+    width:143px;
+    height:200px;
+    float:left;
+    margin: 10px;
+}
+
+.front{
+    width:143px;
+    height:200px;
+}
+
+.card img {
+    position: absolute;
+}
+
+.card.flipped .back{
+    display:none;
+}
+/****** Navigation ******/
+
+/****** Footer ******/

@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- Michael Lev 2017-02-21 -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Memory Game - Memory Monsters</title>
+    <!-- Good Practice: Place all External CSS Files Within the Head Tag -->
+    <link rel="stylesheet" href="../css/general.css"/>
+    <link rel="stylesheet" href="../css/game.css"/>
+</head>
+<body> <!--onload="myInit()"-->
+    <!-- display_html_page_after_loading_complete - html part (single line) -->
+    <!-- needed so cards won't partially be seen after browser cash cleared -->
+    <!-- Add this DIV direct after opening body tag                         -->
+    <div style="display: none" id="hideAll">&nbsp;</div>
+
+    <header class="box" id="hdr">
+        <img src="../allData/img/Michael-Lev-864.jpg" id="idMyPic" alt="Michael Lev"/>
+        <img src="../allData/img/logo.png" class="logo" alt="game logo"/>
+        <h1>Memory Monsters</h1>
+        <h2>Where we <span class="niceText">Scare</span> people Off</h2>
+    </header>
+
+    <div class="tabMain">
+        <a href="javascript:void(0)"      class="tabButton" onclick="openTab(event, 'TabContactMe')">Contact me</a>
+        <a href="../index.html"           class="tabButton" >Home</a>
+        <a                                class="tabLabel">Player: <span id="idSpanPlayer"></span></a>
+        <a href="" id="idBtnChangePlayer" class="tabButton" onclick="changePlayer()">[Not <span id="idSpanPlayerPrev"></span>?]</a>
+        <a id="idElBestGameTime">Best Game Time [sec]: <span id="idSpanBestGameTime"></span></a>
+        <a href="" id="idBtnPlayAgain"    class="tabButton" onclick="playAgain()">[Play Again]</a>
+    </div>
+    <div id="TabContactMe" class="tabContent">
+        <!--<a href="tel:0547718425">Phone to: 0547718425</a>-->
+        <a href="mailto:mlev.mail@gmail.com">email to: mlev.mail@gmail.com</a>
+    </div>
+
+
+    <div class="board">
+        <div class="card" cardType="1" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/1.png" alt="card 1 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="2" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/2.png" alt="card 2 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="1" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/1.png" alt="card 1 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="2" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/2.png" alt="card 2 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="3" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/3.png" alt="card 3 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="4" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/4.png" alt="card 4 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="3" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/3.png" alt="card 3 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="4" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/4.png" alt="card 4 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="5" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/5.png" alt="card 5 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="6" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/6.png" alt="card 6 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="5" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/5.png" alt="card 5 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+        <div class="card" cardType="6" onclick="cardClicked(this)">
+            <img class="front" src="../allData/game/cards/6.png" alt="card 6 front">
+            <img class="back" src="../allData/game/cards/back1.png" alt="card back">
+        </div>
+
+    </div>
+    <!-- Good Practice: Place Javascript Files at the Bottom -->
+    <script src="../js/general.js"></script>
+    <script src="../js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/**
+ * Created by Michael Lev on 19/02/2017.
+ */
+/****** Header ******/
+html,body
+{
+    height:100%;
+    width:100%;
+}
+.rowContent {
+    height: calc(100vh - 50px);
+    font-size: 250%;
+}
+
+header {
+    background-color: black;
+    color:            lightgreen;
+    padding:    10px;
+    margin:     0px 10px 10px;/*top, right+left, bottom */
+    text-align: center;
+}
+h2{
+    color: white;
+}
+.introduction {
+    margin-right: 10px;
+}
+.boldedUnderline{
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*************************/
+/****** Logo My Pic ******/
+/*************************/
+
+#idMyPic {
+    float:         right;
+    width:         130px;
+    height:        130px;
+    border-radius:  30px;
+    transition:         width 3s, height 2s;
+    -webkit-transition: width 3s, height 2s;/* For Safari 3.1 to 6.0 */
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+#idMyPic:hover{
+    width:  390px;
+    height: 390px;
+}
+/******************/
+/****** Tabs ******/
+/******************/
+/* Style the tabMain */
+div.tabMain {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;/*bg of whole tabs bar and its buttons: gray dark-light*/
+    margin: 0 10px; /*top+bottom, right+left */
+}
+a{
+    font-size: 24px;/*org: 17px*/
+}
+/* Style the links inside the tabMain */
+.tabMain a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    /*font-size: 30px;/*org: 17px*/
+}
+/* Change background color of links on hover */
+.tabMain a:hover {
+    background-color: #ddd;/*tabMain button hover: gray dark-medium*/
+}
+/* Create an active/current tablink class */
+.tabMain a:focus, .active {
+    background-color: #ccc;/*tabMain button focus: gray dark-most*/
+}
+/*.tabMain{
+    /* set tabMain height to 10% of screen height (for phones)
+    height: 10%;
+    font-style: italic;
+}*/
+.tabButton {
+    /* set buttons to full tabMain height - no need*/
+    /*height: 100%;*/
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-style: italic;/*my addition*/
+    display: inline-block;
+    /* font-size: 24px;/* org: 16px */
+    margin: 4px 4px; /*top 4 right 2*/
+    cursor: pointer;
+}
+.tabLabel {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-style: italic;
+    display: inline-block;
+    margin: 4px 4px;
+}
+.rowLinks {
+    /* set buttons to full tabMain height - no need*/
+    /*height: 100%;*/
+    background-color: gold;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    /*text-align: center;*/
+    text-decoration: none;
+    font-style: italic;/*my addition*/
+    display: inline-block;
+    /*font-size: 16px;/* org: 16px */
+    margin: 10px 40px; /*top 4 right 2*/
+    cursor: pointer;
+}
+/* Style the tabMain content */
+.tabContent, .tableContent {
+    display:           none;
+    padding:           6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation:         fadeEffect 1s;
+    border:            1px solid #ccc;
+    border-top:        none;
+    margin-left:       10px;
+}
+.tabContent a, .tableContent a, .dropdown-content a{
+    color:           blue;
+    /*text-decoration: underline;*/
+    padding:         12px 16px;
+    display:         block;
+    font-style:      italic;
+    position:        relative;
+}
+/* Change background color of links on hover */
+.tabContent a:hover, .tableContent a:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+/* internal list in main html */
+ul#horizontalList li  {
+    display: inline;
+}
+
+/* hobbies - links to articles/videos */
+.rowContent{
+    margin: 0px 10px;/* top-bottom, right-left */
+    display: none;
+}
+/**********************/
+
+/**********************/
+/******* Table ********/
+/**********************/
+caption {
+    font-size: x-large;
+}
+table th {
+    font-size: x-large;
+    color:     orangered;
+}
+table, th, td {
+    border:          1px solid black;
+    border-collapse: collapse;
+}
+th {
+    padding:    5px;
+}
+td {
+    padding:    1px 5px;
+    text-align: right;
+    font-size:  x-large;
+}
+td.tableLeft {text-align: center}
+
+
+/**********************/
+/****** Dropdown ******/
+/**********************/
+
+.dropbtn {
+    background-color: #4CAF50;
+    color:       white;
+    padding:     16px;
+    font-size:   16px;
+    border:      none;
+    cursor:      pointer;
+    margin-left: 10px;
+    font-style:  italic;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+.dropdown {
+    position:    relative; /* org: relative */
+    display:     inline-block;
+    margin-left: 0px;
+    float:       left;
+    display:     none; /* don't need it after using tabs */
+}
+
+.dropdown-content {
+    display:           none;
+    position:          relative;/* relative-one line. org: absolute (wrap) */
+    background-color: #f9f9f9;
+    min-width:         160px;
+    overflow:          auto;
+    box-shadow:        0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:           1;
+    margin-left: 10px;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;}
+.show {display:block;}
+
+/**********************/
