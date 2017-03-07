@@ -16,9 +16,9 @@ var busy = false;
 const TOTAL_COUPLES_COUNT = 6;
 
 // Load audio files
-const AUDIO_RIGHT = new Audio('sound/right.mp3');
-const AUDIO_WRONG = new Audio('sound/wrong.mp3');
-const AUDIO_WIN   = new Audio('sound/win.mp3');
+const AUDIO_RIGHT = new Audio('../allData/game/sound/right.mp3');
+const AUDIO_WRONG = new Audio('../allData/game/sound/wrong.mp3');
+const AUDIO_WIN   = new Audio('../allData/game/sound/win.mp3');
 
 var insideGame = false;
 var timeStart, timeEnd, newTimeDurationSec;
@@ -28,7 +28,7 @@ document.getElementById("hideAll").style.display = "block";
 window.onload = function()
 {
     document.getElementById("hideAll").style.display = "none";
-}
+};
 // display_html_page_after_loading_complete - js part - end
 
 // stackoverflow javascript that executes after page load
@@ -66,7 +66,7 @@ function getLocalStorageUserName(){
         sessionStorage.isPlayer = "true";
     }
 }function changePlayer(){
-    if (sessionStorage.isAfterGame != "true"){
+    if (sessionStorage.isAfterGame !== "true"){
         sessionStorage.isPlayer = "false"
     }
     sessionStorage.changingPlayer = 'true';
@@ -78,21 +78,21 @@ function myInit() {
     logg("  localStorage.memoryMonstersUserName = " + localStorage.memoryMonstersUserName);
     logg("  sessionStorage.idSpanPlayer = "         + sessionStorage.idSpanPlayer);
     getLocalStorageUserName();
-    if (sessionStorage.playingAgain          == 'true'
-        || sessionStorage.isAfterGame        == "true"
-        || sessionStorage.clickedOutsideTabs == "true"){
+    if (sessionStorage.playingAgain          === 'true'
+        || sessionStorage.isAfterGame        === "true"
+        || sessionStorage.clickedOutsideTabs === "true"){
         sessionStorage.playingAgain       = 'false';
     }
-    if (sessionStorage.isPlayer == "true"){
+    if (sessionStorage.isPlayer === "true"){
         document.getElementById("idSpanPlayer")      .innerHTML = sessionStorage.idSpanPlayer;
         document.getElementById("idSpanPlayerPrev")  .innerHTML = sessionStorage.idSpanPlayer;
         document.getElementById("idSpanBestGameTime").innerHTML = sessionStorage.storedUserBestTimeSec;
         unhideItem("idBtnChangePlayer");
-        if (sessionStorage.isAfterGame == "true") {
+        if (sessionStorage.isAfterGame === "true") {
             unhideItem("idElBestGameTime");
         }
     }
-    if (sessionStorage.isAfterGame == "true" || sessionStorage.changingPlayer == 'true'){
+    if (sessionStorage.isAfterGame === "true" || sessionStorage.changingPlayer === 'true'){
         logg("  -> reset()");
         reset();
         sessionStorage.isAfterGame        = "false";
@@ -105,14 +105,14 @@ function myInit() {
     logg("  exit");
 }
 function promptPlayer(){
-    if (sessionStorage.isPlayer != "true"){
+    if (sessionStorage.isPlayer !== "true"){
         sessionStorage.idSpanPlayer = "פלוני אלמוני";
     }
     sessionStorage.    idSpanPlayer = prompt("בבקשה הכנס את שמך טרם שתתחיל במשחק", sessionStorage.idSpanPlayer);
-    if (sessionStorage.idSpanPlayer == "null" ||
-        sessionStorage.idSpanPlayer == "undefined" ||
-        sessionStorage.idSpanPlayer == "" ||
-        sessionStorage.idSpanPlayer == "פלוני אלמוני"){
+    if (sessionStorage.idSpanPlayer === "null" ||
+        sessionStorage.idSpanPlayer === "undefined" ||
+        sessionStorage.idSpanPlayer === "" ||
+        sessionStorage.idSpanPlayer === "פלוני אלמוני"){
         promptPlayer();
     }
     localStorage.memoryMonstersUserName = sessionStorage.idSpanPlayer;
@@ -147,7 +147,7 @@ function measureGameTime(){
     timeEnd = Date.now();
     newTimeDurationSec = (timeEnd - timeStart)/1000;
     var oldTimeDurationSec = Number(sessionStorage.storedUserBestTimeSec);
-    if (oldTimeDurationSec == -1 || newTimeDurationSec < oldTimeDurationSec){
+    if (oldTimeDurationSec === -1 || newTimeDurationSec < oldTimeDurationSec){
         sessionStorage.storedUserBestTimeSec = newTimeDurationSec.toString();
     }
     sessionStorage.isAfterGame = "true";
@@ -157,7 +157,7 @@ function measureGameTime(){
 }
 function toggle_visibility(id) {
     var e = document.getElementById(id);
-    if(e.style.display == 'block') {
+    if(e.style.display === 'block') {
         e.style.display = 'none';
     }
     else {
